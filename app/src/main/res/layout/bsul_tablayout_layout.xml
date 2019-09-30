@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/my20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my40dp"
+        android:background="@color/f6_color"
+        android:gravity="center"
+        android:text="CommonTabLayout"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my15sp" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tablayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#57385C"
+        app:tl_iconVisible="false"
+        app:tl_indicator_bounce_enable="true"
+        app:tl_indicator_color="@color/actionsheet_red"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_height="@dimen/my3dp"
+        app:tl_indicator_width="@dimen/my15dp"
+        app:tl_textSelectColor="@color/actionsheet_red"
+        app:tl_textsize="@dimen/my14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my40dp"
+        android:layout_marginTop="@dimen/my10dp"
+        android:background="@color/f6_color"
+        android:gravity="center"
+        android:text="SegmentTabLayout"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my15sp" />
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/tablayout2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tl_bar_stroke_color="#009688"
+        app:tl_divider_color="#009688"
+        app:tl_indicator_anim_enable="false"
+        app:tl_indicator_color="#009688" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my40dp"
+        android:layout_marginTop="@dimen/my10dp"
+        android:background="@color/f6_color"
+        android:gravity="center"
+        android:text="SlidingTabLayout"
+        android:textColor="@color/black"
+        android:textSize="@dimen/my15sp" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tablayout3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#57385C"
+        app:tl_indicator_color="@color/actionsheet_red"
+        app:tl_indicator_corner_radius="1.5dp"
+        app:tl_indicator_height="@dimen/my3dp"
+        app:tl_indicator_width="@dimen/my15dp"
+        app:tl_textSelectColor="@color/actionsheet_red" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tablayout4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#57385C"
+        app:tl_indicator_color="@color/actionsheet_red"
+        app:tl_indicator_corner_radius="1dp"
+        app:tl_indicator_height="@dimen/my2dp"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_textSelectColor="@color/actionsheet_red" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="第一种方式"
+        android:textColor="@color/white" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_flow_layout_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/my15dp"
+        android:paddingTop="@dimen/my5dp"
+        android:paddingRight="@dimen/my15dp"
+        android:paddingBottom="@dimen/my15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:layout_marginTop="@dimen/my20dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="第二种方式"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="4">
+
+        <com.bs.android.customview.RadioGroupEx
+            android:id="@+id/food_tag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" />
+
+    </LinearLayout>
+</LinearLayout>

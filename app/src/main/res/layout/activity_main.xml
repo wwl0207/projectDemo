@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout android:layout_weight="1"
+        android:id="@+id/framelayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!--主页三个radioButton-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        style="@style/main_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:background="@color/backgroud_color01">
+
+        <com.bs.android.customview.radiobutton.MyRadioButton
+            android:id="@+id/rb_index01"
+            style="@style/main_radiobutton"
+            android:checked="true"
+            android:text="主界面"
+            app:rbDrawableTop="@drawable/rb_find_selecter"
+            app:rbDrawableTopSize="@dimen/my30dp" />
+
+        <com.bs.android.customview.radiobutton.MyRadioButton
+            android:id="@+id/rb_index02"
+            style="@style/main_radiobutton"
+            android:text="列表01"
+            app:rbDrawableTop="@drawable/rb_home_selecter"
+            app:rbDrawableTopSize="@dimen/my30dp" />
+
+        <com.bs.android.customview.radiobutton.MyRadioButton
+            android:id="@+id/rb_index03"
+            style="@style/main_radiobutton"
+            android:text="列表03"
+            app:rbDrawableTop="@drawable/rb_home_selecter"
+            app:rbDrawableTopSize="@dimen/my30dp" />
+
+        <com.bs.android.customview.radiobutton.MyRadioButton
+            android:id="@+id/rb_index04"
+            style="@style/main_radiobutton"
+            android:text="列表04"
+            app:rbDrawableTop="@drawable/rb_home_selecter"
+            app:rbDrawableTopSize="@dimen/my30dp" />
+
+
+    </RadioGroup>
+
+</LinearLayout>

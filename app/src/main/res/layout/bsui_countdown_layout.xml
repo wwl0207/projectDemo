@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:background="@color/f6_color"
+        android:gravity="center">
+
+        <com.bs.android.customview.SpikeDownTimerView
+            android:id="@+id/timerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:layout_marginTop="@dimen/my30dp"
+        android:background="@color/f6_color"
+        android:gravity="center" android:weightSum="2">
+
+        <TextView
+            android:id="@+id/timer_tv" android:layout_weight="1"
+            android:layout_width="wrap_content" android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="倒计时开始" />
+
+        <TextView android:layout_weight="1"
+            android:id="@+id/timer_tv2" android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="倒计时开始" />
+    </LinearLayout>
+</LinearLayout>

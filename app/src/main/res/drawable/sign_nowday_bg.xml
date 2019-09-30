@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:useLevel="false" android:shape="oval">
+    <solid android:color="@color/actionsheet_red"/>
+    <!--<stroke-->
+        <!--android:width="@dimen/my1dp"-->
+        <!--android:color="@color/actionsheet_red" />-->
+    <!--<gradient-->
+        <!--android:endColor="@color/bottom_menu_tv_color"-->
+        <!--android:startColor="@color/actionsheet_red" />-->
+</shape>

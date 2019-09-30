@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divide_line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="49.5dp"
+        android:background="@color/divide"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divide_area_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/title_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            tools:text="标题文字" />
+
+        <EditText
+            android:id="@+id/content_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+            android:layout_weight="1" android:enabled="false"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/mc_txt_gray_bg"
+            android:textSize="13sp"
+            tools:text="提示文字" />
+
+        <ImageView
+            android:id="@+id/content_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/rigth_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+</LinearLayout>

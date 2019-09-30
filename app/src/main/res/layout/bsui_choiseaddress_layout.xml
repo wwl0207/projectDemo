@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/topic_item_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout android:paddingTop="@dimen/my30dp"
+        android:layout_width="match_parent" android:gravity="center_vertical"
+        android:layout_height="@dimen/my65dp">
+
+        <LinearLayout android:layout_centerVertical="true"
+            android:id="@+id/back_laytout"
+            android:layout_width="@dimen/my35dp"
+            android:layout_height="@dimen/my35dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/my20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/back_jiantou"
+                android:tint="@color/C4" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择收货地址"
+            android:textColor="@color/black"
+            android:textSize="@dimen/my15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout android:paddingLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/my15dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/local_address_img"
+                android:tint="@color/C5"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/city_choise"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="5"
+                android:paddingLeft="@dimen/my2dp"
+                android:paddingRight="@dimen/my3dp"
+                android:singleLine="true"
+                android:text="定位中..."
+                android:textColor="@color/C25"
+                android:textSize="@dimen/my15sp" />
+
+            <ImageView
+                android:layout_width="@dimen/my10dp"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/jiazaiquanbu2x"
+                android:tint="@color/C25" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_find_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/my35dp"
+            android:layout_marginLeft="@dimen/my10dp"
+            android:layout_marginRight="@dimen/my10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab1_search_edit_bg"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/my16dp"
+                android:layout_height="@dimen/my16dp"
+                android:layout_marginLeft="@dimen/my10dp"
+                android:src="@drawable/main_search" />
+
+            <EditText
+                android:id="@+id/address_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/my10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="搜索地址"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColorHint="@color/actionsheet_gray"
+                android:textSize="@dimen/sp_14" />
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/my3dp"
+                android:paddingRight="@dimen/my3dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/my24dp"
+                    android:layout_height="@dimen/my124dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_content_delete" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/my1dp">
+
+        <RelativeLayout
+            android:id="@+id/map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/address_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_layout" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

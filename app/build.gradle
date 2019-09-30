@@ -1,0 +1,165 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion 28
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('keystory/shoppingmall.jks')
+            storePassword '123456'
+        }
+    }
+    defaultConfig {
+        applicationId "com.bs.android"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.1"
+
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildToolsVersion '28.0.2'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.0.0'
+            }
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.bs.android.greendao'
+    targetGenDir 'src/main/java'
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    api 'com.orhanobut:logger:2.2.0'
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    api('com.github.hotchemi:permissionsdispatcher:3.2.0') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.2.0"
+    //圆形头像
+    api 'de.hdodenhof:circleimageview:2.2.0'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'io.reactivex.rxjava2:rxjava:2.2.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    api 'com.alibaba:fastjson:1.2.33'
+    api 'com.youth.banner:banner:1.4.10'
+    // Durban是一个MD风格的图片裁剪工具
+    api 'com.yanzhenjie:durban:1.0.1'
+    //Album 防微信选择图片
+    api 'com.yanzhenjie:album:2.1.2'
+    //ViewPager指示器
+    api 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //CheckVersionLib版本检测更新库
+    api 'com.allenliu.versionchecklib:library:2.1.8'
+    //StatusBar工具条
+    api 'com.jaeger.statusbarutil:library:1.5.1'
+    //64K 引用限制
+    api 'com.android.support:multidex:1.0.3'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-18'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-18'
+    //没有使用特殊Header，可以不加这行
+    //recyclerview adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+    //流式布局
+    api 'com.hyman:flowlayout-lib:1.1.2'
+    api 'com.umeng.sdk:common:latest.integration'
+    api 'com.umeng.sdk:analytics:latest.integration'
+    // 倒计时控件
+    api 'com.github.iwgang:countdownview:2.1.6'
+    //数据库
+    api 'org.greenrobot:greendao:3.2.2'
+    api 'com.allenliu.versionchecklib:library:2.1.8'
+    implementation 'com.github.hotchemi:permissionsdispatcher:3.2.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.2.0'
+    //进度提示框
+    api 'com.wang.avi:library:2.1.3'
+    implementation project(':mypicturelibrary')
+    //微信支付
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //YOYO动画
+    implementation 'com.daimajia.androidanimations:library:1.1.2@aar'
+    //启动引导页
+    implementation 'com.stephentuso:welcome:1.4.1'
+    //右滑结束activity
+    implementation 'com.jude:swipebackhelper:3.1.2'
+    implementation project(':FlycoTabLayout_Lib')
+    implementation project(':bannerlib')
+    implementation project(':bspopupwindow')
+    implementation project(':refreashlayout')
+    //滚轮弹框选择----这是一款仿iOS的PickerView控件，有时间选择器和选项选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    //城市三级联动
+    implementation 'liji.library.dev:citypickerview:1.1.0'
+    //定位  城市选择
+    implementation project(':mylocation')
+    //高德
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.amap.api:3dmap:6.9.2'
+
+//    api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //占位符
+    implementation 'me.samlss:broccoli:1.0.0'
+    implementation project(path: ':textviewlib')
+    //另一种权限设置
+    api 'pub.devrel:easypermissions:1.0.1'
+    implementation project(path: ':FJDropDownMenuLib')
+    implementation project(path: ':EditTvLibrary')
+
+//    //选择对话框
+//    api 'com.github.f0ris.sweetalert:library:1.5.1'
+//    //各种全选按钮
+    api 'com.github.rey5137:material:1.2.4'
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/colorAccent"
+              android:id="@+id/ll_base_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--actionBar-->
+    <com.bs.android.customview.titlebar.MyTitleBarView
+        android:layout_marginTop="@dimen/toolbar_padding_top"
+        android:id="@+id/my_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundColor="@color/transparent"
+        app:my_title="标题">
+    </com.bs.android.customview.titlebar.MyTitleBarView>
+
+
+
+
+</LinearLayout>

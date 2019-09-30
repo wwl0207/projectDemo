@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C2_1"
+    android:orientation="vertical">
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容1"
+        app:title_text="标题1" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容2"
+        app:title_text="标题2" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容3"
+        app:title_text="标题3" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容4"
+        app:title_text="标题4" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容5"
+        app:title_text="标题5" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容6"
+        app:title_text="标题6" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容7"
+        app:title_text="标题7" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hint_text="内容8"
+        app:title_text="标题8" />
+
+    <com.tv.lib.MenuItemLayout
+        android:id="@+id/item_layout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:content_color="@color/actionsheet_gray"
+        app:content_size="@dimen/my10dp"
+        app:hint_text="内容9" app:content_eable="true"
+        app:show_title_icon="true"
+        app:title_color="@color/actionsheet_red"
+        app:title_size="10sp"
+        app:title_text="标题9" />
+</LinearLayout>

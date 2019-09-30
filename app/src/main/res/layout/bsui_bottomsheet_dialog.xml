@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my500dp" android:gravity="center"
+            android:textColor="@color/actionsheet_red"
+            android:textSize="@dimen/my20dp"
+            android:text="在上面可以随便画圈圈"/>
+</LinearLayout>

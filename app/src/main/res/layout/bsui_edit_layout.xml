@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Library Name"
+            android:text="MaterialEditText"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            android:textSize="34sp"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="20"
+            app:met_primaryColor="@color/colorAccent"
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:text="EditText in Material Design"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            app:met_baseColor="@android:color/black"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="20"
+            app:met_primaryColor="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/basicEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Basic"
+                android:textColor="@color/red_background" />
+
+            <Button
+                android:id="@+id/enableBt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="DISABLE" />
+
+        </LinearLayout>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Floating Label"
+            app:met_floatingLabel="normal" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Highlight Floating Label"
+            app:met_floatingLabel="highlight" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Custom Floating Label Text"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Label" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/singleLineEllipsisEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Single Line Ellipsis"
+            android:text="Touch The Ellipsis And See What Happens. Touch The Ellipsis And See What Happens."
+            app:met_singleLineEllipsis="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Max Characters"
+            app:met_maxCharacters="5" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min Characters"
+            app:met_minCharacters="3" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Min and Max"
+            app:met_maxCharacters="5"
+            app:met_minCharacters="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/bottomTextEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Helper/Error Text"
+                app:met_helperText="helper is here" />
+
+            <Button
+                android:id="@+id/setErrorBt"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/setError2Bt"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/setError3Bt"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="3" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/validationEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Validation"
+                app:met_helperText="Integer" />
+
+            <Button
+                android:id="@+id/validateBt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="VALIDATE" />
+
+        </LinearLayout>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Custom Accent Typeface"
+            app:met_accentTypeface="fonts/Roboto-LightItalic.ttf"
+            app:met_floatingLabel="normal"
+            app:met_helperText="Helper Text"
+            app:met_maxCharacters="5"
+            app:met_typeface="fonts/Roboto-LightItalic.ttf" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hidden underline"
+            app:met_hideUnderline="true" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clear Button"
+            app:met_clearButton="true" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Material Design Icon"
+            app:met_iconLeft="@drawable/ic_check"
+            app:met_iconPadding="0dp"
+            app:met_maxCharacters="5" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

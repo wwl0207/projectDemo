@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--搜索-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my38dp"
+        android:layout_marginTop="@dimen/my35dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!--返回键-->
+        <RelativeLayout
+            android:id="@+id/rl_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/my15dp"
+            android:paddingRight="@dimen/my10dp">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="@dimen/my20dp"
+                android:layout_height="@dimen/my20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_jiantou"
+                android:tint="@color/black" />
+
+            <!--左边的文字-->
+            <TextView
+                android:id="@+id/tv_left_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/my15sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_find_search"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/my35dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab1_search_edit_bg"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/my16dp"
+                android:layout_height="@dimen/my16dp"
+                android:layout_marginLeft="@dimen/my10dp"
+                android:src="@drawable/main_search" />
+
+            <EditText
+                android:id="@+id/et_search_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/my10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="商品搜索"
+                android:lines="1" android:maxLength="20"
+                android:textColor="#666666"
+                android:textColorHint="#A2A0AB"
+                android:textSize="@dimen/my14sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_keywords"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/my3dp"
+                android:paddingRight="@dimen/my3dp">
+
+                <ImageView
+                    android:layout_width="@dimen/my24dp"
+                    android:layout_height="@dimen/my124dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/search_content_delete" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/my15dp"
+                android:layout_marginRight="@dimen/my10dp"
+                android:text="搜索"
+                android:textColor="@color/C25"
+                android:textSize="@dimen/my14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--历史搜索-->
+    <LinearLayout
+        android:id="@+id/ll_history_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/my10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/my15dp"
+                android:text="历史搜索"
+                android:textColor="@color/C5"
+                android:textSize="@dimen/my14sp" />
+
+            <TextView
+                android:layout_width="@dimen/my0dp"
+                android:layout_height="@dimen/my1dp"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:id="@+id/rl_delete_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/my15dp"
+                android:padding="@dimen/my10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/my18dp"
+                    android:layout_height="@dimen/my18dp"
+                    android:src="@drawable/delete" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tag_flow_layout_history"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/my15dp"
+            android:paddingLeft="@dimen/my15dp"
+            android:paddingRight="@dimen/my15dp"
+            android:paddingTop="@dimen/my5dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_more_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/my5dp"
+            android:paddingTop="@dimen/my5dp">
+
+            <ImageView
+                android:layout_width="@dimen/my18dp"
+                android:layout_height="@dimen/my18dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bottom_jiantou"
+                android:tint="@color/C25" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!--热搜榜-->
+    <LinearLayout android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/my15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/my15dp"
+                android:text="热搜榜"
+                android:textColor="@color/C5"
+                android:textSize="@dimen/my14sp" />
+
+
+        </LinearLayout>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tag_flow_layout_hot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/my15dp" />
+    </LinearLayout>
+
+</LinearLayout>

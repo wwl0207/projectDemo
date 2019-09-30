@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/day_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/my3dp"
+            app:cardElevation="@dimen/my0dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/actionsheet_red"
+                android:gravity="center"
+                android:paddingLeft="@dimen/my5dp"
+                android:paddingRight="@dimen/my5dp">
+
+                <TextView
+                    android:id="@+id/tv_day_decade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/my12sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/my2dp"
+            android:paddingRight="@dimen/my2dp"
+            android:text="天"
+            android:textColor="@color/actionsheet_red"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/my3dp"
+        app:cardElevation="@dimen/my0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/actionsheet_red"
+            android:gravity="center"
+            android:paddingLeft="@dimen/my5dp"
+            android:paddingRight="@dimen/my5dp">
+
+            <TextView
+                android:id="@+id/tv_hour_decade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+
+            <TextView
+                android:id="@+id/tv_hour_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/my2dp"
+        android:paddingRight="@dimen/my2dp"
+        android:text=":"
+        android:textColor="@color/actionsheet_red"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/my3dp"
+        app:cardElevation="@dimen/my0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/actionsheet_red"
+            android:gravity="center"
+            android:paddingLeft="@dimen/my5dp"
+            android:paddingRight="@dimen/my5dp">
+
+            <TextView
+                android:id="@+id/tv_min_decade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+
+            <TextView
+                android:id="@+id/tv_min_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/my2dp"
+        android:paddingRight="@dimen/my2dp"
+        android:text=":"
+        android:textColor="@color/actionsheet_red"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/my3dp"
+        app:cardElevation="@dimen/my0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/actionsheet_red"
+            android:gravity="center"
+            android:paddingLeft="@dimen/my5dp"
+            android:paddingRight="@dimen/my5dp">
+
+            <TextView
+                android:id="@+id/tv_sec_decade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+
+            <TextView
+                android:id="@+id/tv_sec_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my12sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

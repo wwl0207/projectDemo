@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bs.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MainAppTheme">
+
+        <!--高德地图定位 start-->
+        <service android:name="com.amap.api.location.APSService" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a657c01a5766a85182bc318c4b4162e9" />
+        <!--高德地图定位 end-->
+
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:theme="@style/Theme.AppStartLoadTranslucent">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+            <!--<meta-data-->
+                <!--android:name="android.app.shortcuts"-->
+                <!--android:resource="@xml/shortcuts" />-->
+        </activity>
+        <activity android:name="com.picture.android.PictureActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.RegisterActivity"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <!---->
+        <activity android:name=".activity.WebviewActivity"/>
+        <activity android:name=".activity.ForgetPwdActivity" />
+
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ccfa539570df3134b0001a2" />
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1107229284" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle" />
+
+        <!-- 支付 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenStyle" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/FullscreenStyle" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activity.WelcomeGuideActivity"  android:theme="@style/GeneralWelcomeScreenTheme"/>
+        <activity android:name=".activity.MarketLocationActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".fragment.ByteListActivity" />
+        <activity android:name=".activity.TextListActivity" />
+        <activity android:name=".activity.bsui.BSULDemoActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.bsui.BSULBannerActivity" />
+        <activity android:name=".activity.bsui.BSULTabLayoutActivity" />
+        <activity android:name=".activity.bsui.BSULScrollTopActivity" />
+        <activity android:name=".activity.bsui.BSULSmartRefreshActivity" />
+        <activity android:name=".activity.bsui.BSULPlaceholderActivity" />
+        <activity android:name=".activity.bsui.BSULStaticLayoutActivity" />
+        <activity android:name=".activity.bsui.BSULPopupWindowActivity" />
+        <activity android:name=".activity.bsui.BSULEditTextInputActivity" />
+        <activity android:name=".activity.bsui.BSULCalendarCheckInActivity" />
+        <activity android:name=".activity.bsui.BSULDialogActivity" />
+        <activity android:name=".activity.bsui.BSULCountdownActivity" />
+        <activity android:name=".activity.bsui.BSULPicturePreviewActivity" />
+        <activity android:name=".activity.bsui.BSULPayActivity" />
+        <activity android:name=".activity.bsui.BSULCustomButtonActivity" />
+        <activity android:name=".activity.bsui.BSULStyleActivity" />
+        <activity android:name=".activity.bsui.BSULSearchAddressActivity" />
+        <activity android:name=".activity.bsui.BSPopupWindow2Activity" />
+        <activity android:name=".activity.bsui.BSUISignInActivity" />
+        <activity android:name=".activity.bsui.BSULAutoLineActivity" />
+        <activity android:name=".activity.bsui.BSULExpandListActivity" />
+    </application>
+
+</manifest>

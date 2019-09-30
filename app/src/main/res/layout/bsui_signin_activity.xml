@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my240dp"
+        android:background="@color/actionsheet_red"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/my50dp"
+            android:layout_marginTop="@dimen/my25dp"
+            android:paddingBottom="@dimen/my10dp"
+            android:paddingTop="@dimen/my10dp">
+
+            <ImageView
+                android:id="@+id/backimg"
+                android:layout_width="@dimen/my50dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/back_jiantou"
+                android:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="签到"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my18sp" />
+
+            <TextView android:id="@+id/right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/my5dp"
+                android:paddingLeft="@dimen/my15dp"
+                android:paddingRight="@dimen/my10dp"
+                android:paddingTop="@dimen/my1dp"
+                android:text="明细"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/my20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/myintegral_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/my35dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的积分"
+                android:textColor="@color/f6_color"
+                android:textSize="@dimen/my15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/my80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/my10dp"
+            android:orientation="vertical"
+            android:paddingTop="110dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/my10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="30dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_current_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <ImageView
+                            android:id="@+id/lastMonth_img"
+                            android:layout_width="@dimen/my50dp"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/my10dp"
+                            android:src="@drawable/back_jiantou"
+                            android:tint="@color/C5"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/nextMonth_img"
+                            android:layout_width="@dimen/my50dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/my10dp"
+                            android:src="@drawable/open_jiantou"
+                            android:tint="@color/C5"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_sign_year_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="2017年11月"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <com.bs.android.customview.sign.SignCalendar
+                        android:id="@+id/sc_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:layout_marginTop="5dp"
+                        android:clickable="true"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/sign_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/my40dp"
+                        android:layout_marginLeft="@dimen/my40dp"
+                        android:layout_marginRight="@dimen/my40dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/login_submit_back"
+                        android:text="签到"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/my18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sign_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/my5dp"
+                        android:gravity="center_horizontal"
+                        android:text="连续签到3天"
+                        android:textColor="@color/C5"
+                        android:textSize="@dimen/my12sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/my20dp"
+                android:orientation="vertical"
+                android:padding="@dimen/my10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="@dimen/my3dp"
+                        android:layout_height="@dimen/my18sp"
+                        android:background="@color/actionsheet_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/my5dp"
+                        android:text="积分规则说明"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/my15sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sign_rule_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/my10sp"
+                    android:paddingLeft="@dimen/my5dp"
+                    android:text="签到规则"
+                    android:textColor="@color/C5"
+                    android:textSize="@dimen/my13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

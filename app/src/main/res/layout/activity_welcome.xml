@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView android:id="@+id/adv_start"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent" android:scaleType="centerCrop"
+        android:layout_height="match_parent" android:src="@drawable/laucher_back"/>
+
+    <LinearLayout android:id="@+id/tv_layout"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/ad_next_back"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#ffffff"
+            android:text="跳过广告"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_next"
+            android:textColor="#ff0000"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <cn.iwgang.countdownview.CountdownView
+        android:id="@+id/cuntdown_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/my15dp"
+        android:layout_marginTop="@dimen/my15dp"
+        android:paddingBottom="@dimen/my1dp"
+        android:paddingLeft="@dimen/my10dp"
+        android:paddingRight="@dimen/my10dp"
+        android:paddingTop="@dimen/my1dp"
+        android:visibility="gone"
+        app:isHideTimeBackground="true"
+        app:isShowHour="false"
+        app:isShowMinute="false"
+        app:isShowSecond="true"
+        app:isTimeTextBold="false"
+        app:suffixGravity="center"
+        app:suffixHour=":"
+        app:suffixMinute=":"
+        app:suffixTextColor="@color/white"
+        app:suffixTextSize="@dimen/my12dp"
+        app:timeTextColor="@color/white"
+        app:timeTextSize="@dimen/my14dp" />
+</RelativeLayout>

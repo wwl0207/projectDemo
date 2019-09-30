@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv01"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="内部封装PopupWindow"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv02"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="一个第三方的PopupWindow"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>
